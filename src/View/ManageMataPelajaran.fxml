@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="800.0" maxWidth="1200.0" minHeight="800.0" minWidth="1200.0" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1"
+fx:controller="Controller.ManageMataPelajaranController">
+  <children>
+    <AnchorPane maxHeight="800.0" maxWidth="1200.0" minHeight="800.0" minWidth="1200.0" prefHeight="800.0" prefWidth="1200.0" VBox.vgrow="ALWAYS">
+         <children>
+            <ImageView id="cornerImageView" fitHeight="800.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/loginCornerImage.png" />
+               </image>
+            </ImageView>
+            <Label id="manageZoomVideoLabel" fx:id="managemataPelajaranLabel" layoutX="369.0" layoutY="62.0" text="Kelola Mata Pelajaran" textFill="#0ab7e9">
+               <font>
+                  <Font name="Arial Bold" size="50.0" />
+               </font>
+            </Label>
+            <Button id="uploadNewVideoButton" fx:id="tambahButton" onAction="#handleTambahButtonAction" layoutX="849.0" layoutY="630.0" minHeight="50.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="228.0" style="-fx-border-color: #48cae4;" text="Tambah" textFill="#006ca5">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+            </Button>
+            <ImageView id="logoImageView" fitHeight="164.0" fitWidth="201.0" layoutX="1009.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/logo.png" />
+               </image>
+            </ImageView>
+            <TableView id="videoDataTable" fx:id="mataPelajaranDataTable" layoutX="132.0" layoutY="157.0" prefHeight="293.0" prefWidth="945.0">
+              <columns>
+                <TableColumn fx:id="idMataPelajaranColumn" prefWidth="75.0" text="ID Mata Pelajaran" />
+                <TableColumn fx:id="namaMataPelajaranColumn" prefWidth="150.0" text="Nama Mata Pelajaran" />
+              </columns>
+            </TableView>
+            <Button id="backButton" fx:id="backButton" layoutX="70.0" layoutY="50.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" style="-fx-border-color: #48cae4;" text="Kembali" textFill="#006ca5">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Button>
+            <TextField id="videoTitleField" fx:id="namaMataPelajaranField" layoutX="445.0" layoutY="563.0" minHeight="30.0" prefHeight="50.0" prefWidth="631.0" style="-fx-border-color: #0ab7e9;">
+               <font>
+                  <Font name="Arial" size="30.0" />
+               </font>
+            </TextField>
+            <Label id="chooseClassLabel" fx:id="namamataPelajaranLabel" layoutX="130.0" layoutY="570.0" text="Nama Mata Pelajaran" textFill="#006ca5">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label id="chooseClassLabel" fx:id="mataPelajaranBaruLabel" layoutX="130.0" layoutY="480.0" text="Mata Pelajaran Baru" textFill="#006ca5">
+               <font>
+                  <Font name="Arial Bold" size="40.0" />
+               </font>
+            </Label>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

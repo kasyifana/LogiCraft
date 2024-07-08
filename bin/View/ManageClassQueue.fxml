@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="800.0" maxWidth="1200.0" minHeight="800.0" minWidth="1200.0" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ManageClassQueueController">
+  <children>
+    <AnchorPane maxHeight="800.0" maxWidth="1200.0" minHeight="800.0" minWidth="1200.0" prefHeight="800.0" prefWidth="1200.0" VBox.vgrow="ALWAYS">
+         <children>
+            <ImageView id="cornerImageView" fitHeight="800.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Downloads/loginCornerImage.png" />
+               </image>
+            </ImageView>
+            <Label id="uploadZoomVideoLabel" fx:id="manageClassQueueLabel" layoutX="358.0" layoutY="39.0" text="Kelola Antrian Kelas" textFill="#0ab7e9">
+               <font>
+                  <Font name="Arial Bold" size="50.0" />
+               </font>
+            </Label>
+            <ImageView id="logoImageView" fitHeight="164.0" fitWidth="201.0" layoutX="1009.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Downloads/logo.png" />
+               </image>
+            </ImageView>
+            <Label id="chooseClassLabel" fx:id="antrianLabel" layoutX="70.0" layoutY="157.0" text="Antrian" textFill="#006ca5">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label id="chooseClassLabel" fx:id="statusKelasLabel" layoutX="570.0" layoutY="157.0" text="Status Kelas" textFill="#006ca5">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+            </Label>
+            <Button id="assignButton" fx:id="assignButton" onAction="#handleAssignButtonAction" layoutX="323.0" layoutY="712.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="167.0" style="-fx-border-color: #48cae4;" text="Simpan" textFill="#006ca5">
+               <font>
+                  <Font name="Arial Bold" size="25.0" />
+               </font>
+            </Button>
+            <TableView fx:id="antrianDataLabel" layoutX="70.0" layoutY="213.0" prefHeight="200.0" prefWidth="371.0">
+              <columns>
+                <TableColumn fx:id="idUserColumn" prefWidth="75.0" text="ID User" />
+                <TableColumn fx:id="namaUserColumn" prefWidth="150.0" text="Nama User" />
+                <TableColumn fx:id="subscriptionColumn" prefWidth="150.0" text="Berlangganan Untuk Kelas" />
+              </columns>
+            </TableView>
+            <ComboBox id="chooseClassComboBox" fx:id="mataPelajaranStatusComboBox" layoutX="730.0" layoutY="209.0" prefHeight="30.0" prefWidth="410.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #0ab7e9;" />
+            <Label id="chooseClassLabel" fx:id="mataPelajaranStatusLabel" layoutX="570.0" layoutY="214.0" text="Mata Kuliah" textFill="#006ca5">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label id="chooseClassLabel" fx:id="daftarKelasStatusLabel" layoutX="570.0" layoutY="259.0" text="Daftar Kelas" textFill="#006ca5">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+            <TableView fx:id="daftarKelasDataTabel" layoutX="730.0" layoutY="256.0" prefHeight="200.0" prefWidth="410.0">
+               <columns>
+                  <TableColumn fx:id="idKelasColumn" prefWidth="75.0" text="ID Kelas" />
+                  <TableColumn fx:id="namaKelasColumn" prefWidth="150.0" text="Nama Kelas" />
+                  <TableColumn fx:id="mataPelajaranColumn" prefWidth="150.0" text="Mata Pelajaran" />
+                  <TableColumn fx:id="namaGuruColumn" prefWidth="150.0" text="Nama Guru" />
+                  <TableColumn fx:id="jumlahSiswaColumn" prefWidth="100.0" text="Jumlah Siswa" />
+               </columns>
+            </TableView>
+            <Label id="chooseClassLabel" fx:id="assignSiswaLabel" layoutX="70.0" layoutY="456.0" text="Masukkan Siswa ke Kelas" textFill="#006ca5">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label id="chooseClassLabel" fx:id="idSiswaLabel" layoutX="70.0" layoutY="515.0" text="ID Siswa" textFill="#006ca5">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label id="chooseClassLabel" fx:id="idKelasLabel" layoutX="70.0" layoutY="612.0" text="ID Kelas" textFill="#006ca5">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField id="videoTitleField" fx:id="idSiswaField" layoutX="250.0" layoutY="506.0" minHeight="30.0" prefHeight="30.0" prefWidth="240.0" style="-fx-border-color: #0ab7e9;">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </TextField>
+            <TextField id="videoTitleField" fx:id="namaSiswaField" layoutX="250.0" layoutY="557.0" minHeight="30.0" prefHeight="30.0" prefWidth="240.0" style="-fx-border-color: #0ab7e9;">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </TextField>
+            <Label id="chooseClassLabel" fx:id="namaSiswaLabel" layoutX="70.0" layoutY="561.0" text="Nama Siswa" textFill="#006ca5">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField id="videoTitleField" fx:id="idKelasField" layoutX="250.0" layoutY="610.0" minHeight="30.0" prefHeight="30.0" prefWidth="240.0" style="-fx-border-color: #0ab7e9;">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </TextField>
+            <TextField id="videoTitleField" fx:id="namaKelasField" layoutX="250.0" layoutY="664.0" minHeight="30.0" prefHeight="30.0" prefWidth="240.0" style="-fx-border-color: #0ab7e9;">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </TextField>
+            <Label id="chooseClassLabel" fx:id="namaKelasLabel" layoutX="70.0" layoutY="670.0" text="Nama Kelas" textFill="#006ca5">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label id="chooseClassLabel" fx:id="buatKelasBaruLabel" layoutX="570.0" layoutY="492.0" text="Buat Kelas Baru" textFill="#006ca5">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label id="chooseClassLabel" fx:id="mataPelajaranBaruLabel" layoutX="570.0" layoutY="551.0" text="Mata Kuliah" textFill="#006ca5">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+            <ComboBox id="chooseClassComboBox" fx:id="mataPelajaranBaruComboBox" layoutX="730.0" layoutY="547.0" prefHeight="30.0" prefWidth="410.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #0ab7e9;" />
+            <Label id="chooseClassLabel" fx:id="namaKelasBaruLabel" layoutX="570.0" layoutY="597.0" text="Nama Kelas" textFill="#006ca5">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField id="videoTitleField" fx:id="namaKelasBaruField" layoutX="730.0" layoutY="595.0" minHeight="30.0" prefHeight="30.0" prefWidth="410.0" style="-fx-border-color: #0ab7e9;">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </TextField>
+            <Button id="uploadButton" fx:id="buatKelasBaruButton" onAction="#handleBuatKelasBaruButtonAction" layoutX="947.0" layoutY="641.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="192.0" style="-fx-border-color: #48cae4;" text="Buat Kelas" textFill="#006ca5">
+               <font>
+                  <Font name="Arial Bold" size="25.0" />
+               </font>
+            </Button>
+            <Button id="backButton" fx:id="backButton" layoutX="80.0" layoutY="60.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" style="-fx-border-color: #48cae4;" text="Kembali" textFill="#006ca5">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

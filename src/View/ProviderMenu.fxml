@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="800.0" maxWidth="1200.0" minHeight="800.0" minWidth="1200.0" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1"
+     fx:controller="Controller.ProviderMenuController">
+    <children>
+        <AnchorPane maxHeight="800.0" maxWidth="1200.0" minHeight="800.0" minWidth="1200.0" prefHeight="800.0" prefWidth="1200.0" VBox.vgrow="ALWAYS">
+            <children>
+                <ImageView id="cornerImageView" fitHeight="800.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assets/loginCornerImage.png" />
+                    </image>
+                </ImageView>
+                <Label id="uploadZoomVideoLabel" fx:id="menuLabel" layoutX="535.0" layoutY="48.0" text="Menu" textFill="#0ab7e9">
+                    <font>
+                        <Font name="Arial Bold" size="50.0" />
+                    </font>
+                </Label>
+                <ImageView id="logoImageView" fitHeight="164.0" fitWidth="201.0" layoutX="1009.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assets/logo.png" />
+                    </image>
+                </ImageView>
+                <Button id="uploadButton" fx:id="manageQueueButton" layoutX="350.0" layoutY="233.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="500.0" style="-fx-border-color: #48cae4;" text="Kelola Antrian" textFill="#006ca5">
+                    <font>
+                        <Font name="Arial Bold" size="30.0" />
+                    </font>
+                </Button>
+                <Button id="uploadButton" fx:id="manageDataPengajarButton" layoutX="350.0" layoutY="379.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="500.0" style="-fx-border-color: #48cae4;" text="Kelola Data Pengajar" textFill="#006ca5">
+                    <font>
+                        <Font name="Arial Bold" size="30.0" />
+                    </font>
+                </Button>
+                <Button id="uploadButton" fx:id="manageDataMataPelajaranButton" layoutX="350.0" layoutY="525.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="500.0" style="-fx-border-color: #48cae4;" text="Kelola Data Mata Pelajaran" textFill="#006ca5">
+                    <font>
+                        <Font name="Arial Bold" size="30.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

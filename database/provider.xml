@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<providers>
+            
+    
+    
+    <provider>
+                        
+        
+        <id>PROVIDER4229</id>
+                        
+        
+        <nama>admin</nama>
+                        
+        
+        <email>admin@mail.com</email>
+                        
+        
+        <password>admin</password>
+                        
+        
+        <role>Provider</role>
+                    
+    
+    </provider>
+        
+    
+    <provider>
+                
+        <id>PROVIDER8812</id>
+                
+        <nama>provi</nama>
+                
+        <email>provi@mail.com</email>
+                
+        <password>provi</password>
+                
+        <role>Provider</role>
+            
+    </provider>
+    
+    <provider>
+        <id>PROVIDER7213</id>
+        <nama>ali</nama>
+        <email>ali@gmail.com</email>
+        <password>123</password>
+        <role>Provider</role>
+    </provider>
+</providers>

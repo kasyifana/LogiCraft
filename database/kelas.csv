@@ -1,0 +1,6 @@
+id,nama,id_mata_pelajaran,id_guru,jumlah_siswa
+KELAS1102,Kelas Matematika A,MP2600,PENGAJAR7931,20
+KELAS5952,Matematika R,MP2600,PENGAJAR7931,2
+KELAS6265,Kimia A,MP6776,PENGAJAR5652,0
+
+KELAS7632,Matematika A,MP7426,PENGAJAR2860,1
