@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
@@ -224,24 +225,24 @@ public class AccessVideoController implements Initializable {
                 }
                 String[] values = line.split(",");
                 if (values.length >= 5 && values[3].equals(idKelas)) {
-                    Rectangle square = new Rectangle(150, 100);
-                    square.setStyle("-fx-fill: #CCCCCC;");
+                    ImageView thumbnailImageView = new ImageView(new Image(getClass().getResource("/assets/thumbnail_icon.png").toExternalForm()));
+                    thumbnailImageView.setFitWidth(150);
+                    thumbnailImageView.setFitHeight(100);
+                    thumbnailImageView.setPreserveRatio(true);
+                    thumbnailImageView.setSmooth(true);
+                    thumbnailImageView.setCache(true);
 
                     Label titleLabel = new Label(values[1]);
                     titleLabel.setStyle("-fx-font-weight: bold;");
 
-                    AnchorPane videoPane = new AnchorPane(square, titleLabel);
-                    AnchorPane.setTopAnchor(square, 0.0);
-                    AnchorPane.setLeftAnchor(square, 0.0);
-                    AnchorPane.setRightAnchor(square, 0.0);
-                    AnchorPane.setBottomAnchor(square, 30.0);
-                    AnchorPane.setLeftAnchor(titleLabel, 5.0);
-                    AnchorPane.setRightAnchor(titleLabel, 5.0);
-                    AnchorPane.setBottomAnchor(titleLabel, 5.0);
+                    VBox videoBox = new VBox(thumbnailImageView, titleLabel);
+                    videoBox.setSpacing(5);
+                    videoBox.setPadding(new Insets(5, 5, 5, 5));
+                    videoBox.setStyle("-fx-background-color: #CCCCCC; -fx-alignment: center;");
 
-                    videoPane.setOnMouseClicked(event -> playVideo(values[4]));
+                    videoBox.setOnMouseClicked(event -> playVideo(values[4]));
 
-                    gridPane.add(videoPane, rowIndex % 3, rowIndex / 3);
+                    gridPane.add(videoBox, rowIndex % 3, rowIndex / 3);
                     rowIndex++;
                 }
             }
@@ -249,7 +250,6 @@ public class AccessVideoController implements Initializable {
             e.printStackTrace();
         }
     }
-
     private void playVideo(String videoFileLink) {
         File file = new File(videoFileLink);
         Media media = new Media(file.toURI().toString());
